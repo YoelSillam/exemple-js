@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<script>
+    let maVariable = "Hello World v2";
+    const LISTE_MOIS = ["janvier", "fevrier", "mars", "avril", "..."]
+
+    // alert(maVariable);
+let somme=10
+
+    function afficheMessage(message) {
+        let myNumber = document.getElementById("iNumber").value;
+        if (parseInt(myNumber)==myNumber) {
+            somme+=parseInt(myNumber);
+            document.getElementById("resultat").innerHTML=somme;
+            document.getElementById("erreur").innerHTML="";
+            //alert(somme)
+        }
+        else{
+            document.getElementById("erreur").innerHTML="Merci d'entrer un nombre" ;
+            document.getElementById("iNumber").value="";
+        }
+    }
+    function reset(){
+        somme=10
+        document.getElementById("resultat").innerHTML=somme;
+        document.getElementById("iNumber").value="";
+    }
+</script>
+<div id="erreur"></div>
+<input type="text" id="iNumber">
+<button onclick="afficheMessage()">calcul</button>
+<button onclick="reset()">reset</button>
+<div id="resultat">10</div>
+</body>
+</html>
